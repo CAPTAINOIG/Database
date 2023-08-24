@@ -1,0 +1,30 @@
+#offcanvasWithBothOptions{
+    background-color: rgb(4,48,64);
+}
+
+#background{
+    background-color: rgb(4,48,64);
+    height: 90vh;
+    
+ }
+ #portal{
+    margin-left: -100px;
+ }
+ #color{
+    background-color: rgb(179,148,113);
+ }
+ #premium{
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 75px;
+    margin-top: -65px;
+    font-size: 40px;
+    padding-left: 400px;
+ }
+ #oig2{
+   border: 2px solid white;
+   border-radius: 100%;
+   width: 50%;
+   margin-left: 100px;
+   background-color: white;
+ }

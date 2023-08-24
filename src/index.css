@@ -1,0 +1,125 @@
+#signup{
+    background-color: white;
+    margin-top: 50px;
+}
+#clas{
+  margin-top: 150px; 
+}
+#label{
+  color: rgb(179,148,113);
+  font-weight: bold;
+  font-size: 20px;
+}
+#navbar{
+    background-color: rgb(4,48,64);
+    
+  }
+  #section{
+    background-color: rgb(4,48,64);
+    height: 100vh;
+  }
+  #sectionA{
+    background-color: rgb(4,48,64);
+    height: 100vh;
+  }
+  #reg{
+    color: rgb(4,48,64);
+  }
+  #submit{
+    background-color: rgb(4,48,64);
+  }
+  .signin{
+    color: rgb(4,48,64);
+    font-weight: bold;
+
+  }
+  #mem{
+    color: rgb(4,48,64);
+    margin-top: 20px;
+}
+#up{
+    margin-left: 200px;
+    color: rgb(4,48,64);
+    background-color: rgb(4,48,64);
+    margin-top: 20px;
+}
+#buttonA{
+  background-color: rgb(4,48,64);
+  color: white;
+}
+
+
+
+
+
+
+
+@media(max-width: 600px){
+  #up{
+    margin-left: 0px;
+  }
+  #signup{
+    background-color: white;
+    margin-top: 20px;
+    width: 90%;
+}
+#signin{
+  color: rgb(4,48,64);
+  width: 90%;
+  
+}
+#reg{
+  color: rgb(4,48,64);
+  margin-left: -20px;
+}
+#header{
+  background-color: rgb(179,148,113);
+
+  width: 100%;
+  height: 5vh;
+
+}
+#welcome{
+  font-size: 20px;
+  margin-left: 10px;
+  color: rgb(4,48,64);
+  font-family: 'Times New Roman', Times, serif;
+}
+#imager{
+  margin-left: 0px;
+  width: 20px;
+  display: none;
+}
+#background{
+  background-color: rgb(4,48,64);
+  width: 100%;
+  height: 350vh;
+  
+}
+#portal{
+  margin-left: 0px;
+}
+#color{
+  background-color: rgb(179,148,113);
+}
+#premium{
+  width: 80%;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: px;
+  margin-top: -65px;
+  font-size: 10px;
+  padding-left: 0px;
+}
+.card{
+  margin-left: 0px;
+  width: 100%;
+}
+#profile, #doc, #course, #pass, #fee, #pay, #resources, #reg, #acco, #board, #time, #semester{
+  margin-left: 80px;
+  color: rgb(4,48,64);
+}
+.profile, .doc, .course, .pass, .fee, .pay, .resources, .reg, .acco, .board, .time, .semester{
+  margin-left: 100px;   
+}
+}
+ 
