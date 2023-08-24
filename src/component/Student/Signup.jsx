@@ -65,7 +65,7 @@ const Signup = () => {
    
   return (
     <>
-    <section id='section'>       
+    <section id='section' className='border'>       
      <div id='signup' className="col-lg-4 shadow px-3 mx-auto">
         <div className={message== "" ? "":"alert alert-success"}>{message}</div>
                 <h1 id='reg' className='fw-bold'>SIGN UP</h1>
