@@ -1,11 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Errorpage = () => {
   return (
     <div>
-    <h1>Error</h1>
-    {userInfo.firstName}
-    
+    <Link className='btn btn-dark' to="/home"></Link>
+    <h1>ERRORPAGE</h1>
     </div>
   )
 }
