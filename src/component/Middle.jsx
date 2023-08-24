@@ -9,10 +9,10 @@ const Middle = () => {
     <>
     <div id="carouselExampleCaptions" class="carousel slide">
  
-  <div class="carousel-inner">
-    <div class="carousel-item active">
+  <div className="carousel-inner">
+    <div className="carousel-item active">
     <img className='img' src={image} alt="" />
-      <div class="carousel-caption d-none d-md-block">
+      <div className="carousel-caption d-none d-md-block">
         <h5 id='application'>Applications are Open</h5>
         <div className='bn'>
         <Link className='btn btn-lg btn-dark' to="/student/signup">New Students Apply</Link>

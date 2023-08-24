@@ -37,7 +37,7 @@ const Signin = () => {
         <>
         <section id='sectionA' className='border'>
             <div id='signin' className="col-lg-4 mx-auto bg-light px-2 my-5">
-            <div id='clas' className= {message == "" ? "" : "alert alert-danger"}>{message}</div>
+            <div id='clas' className={message == "" ? "" : "alert alert-danger"}>{message}</div>
                 <h1 id='page' className="text-center fw-bold text-decoration-underline">
                     Sign In Page
                 </h1>
@@ -53,7 +53,7 @@ const Signin = () => {
                 <button id='buttonA' className='btn form-control fs-5 fw-bold' onClick={submitDetails}>submit</button>
                 <div className="d-flex">
                     <p id='mem' className='fs-3'>Not a member?</p> 
-                    <span ><Link className='text-decoration-none fs-5 text-light mb-3 btn' id='up' to="/Student/Signup">Sign up now</Link></span>
+                    <span><Link className='text-decoration-none fs-5 text-light mb-3 btn' id='up' to="/Student/Signup">Sign up now</Link></span>
                     </div>
             </div>
             </section>

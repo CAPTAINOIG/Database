@@ -25,17 +25,17 @@ const Canvas = () => {
   return (
     <>
       <section id='background'>
-        <button id='color' class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+        <button id='color' className="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
           <img src={tog} alt="" width={50} />
         </button>
 
-        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title text-light" id="offcanvasWithBothOptionsLabel"></h5>
-            <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <div className="offcanvas offcanvas-start" data-bs-scroll="true" tabIndex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+          <div className="offcanvas-header">
+            <h5 className="offcanvas-title text-light" id="offcanvasWithBothOptionsLabel"></h5>
+            <button type="button" className="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <img id='oig2' src={oig2} alt="" width={300} />
-          <div class="offcanvas-body">
+          <div className="offcanvas-body">
             <p className='text-light fs-2 '>General</p>
             <Link className='text-decoration-none' to="">
               <img className='bg-light' src={real} alt="" width={30} /><span className='text-light fs-5 ms-3'>Dashboard</span>

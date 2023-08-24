@@ -65,9 +65,9 @@ const Signup = () => {
    
   return (
     <>
-    <section id='section' className='border'>       
+    <section id='section'>       
      <div id='signup' className="col-lg-4 shadow px-3 mx-auto">
-        <div className= {message== "" ? "" : "alert alert-success"}>{message}</div>
+        <div className={message== "" ? "":"alert alert-success"}>{message}</div>
                 <h1 id='reg' className='fw-bold'>SIGN UP</h1>
                 <form action="" onSubmit={formik.handleSubmit}>
 
