@@ -1,8 +1,16 @@
 .card{
-   margin-top: 50px;
+   margin-top: 20px;
 }
-#profile, #doc, #course, #pass, #fee, #pay, #resources, #reg, #acco, #board, #time, #semester{
+#profile, #doc, #pass, #fee, #pay, #resources, #acco, #board, #time, #semester{
     margin-left: 50px;
+    color: rgb(4,48,64);
+}
+#course{
+    margin-left: 20px;
+    color: rgb(4,48,64);
+}
+#reg1{
+    margin-left: 20px;
     color: rgb(4,48,64);
 }
 .profile, .doc, .course, .pass, .fee, .pay, .resources, .reg, .acco, .board, .time, .semester{

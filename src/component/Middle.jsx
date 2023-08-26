@@ -15,9 +15,9 @@ const Middle = () => {
       <div className="carousel-caption d-none d-md-block">
         <h5 id='application'>Applications are Open</h5>
         <div className='bn'>
-        <Link className='btn btn-lg btn-dark' to="/student/signup">New Students Apply</Link>
-        <Link className='btn btn-lg btn-dark ms-3' to="/student/signin">Current Students Apply</Link>
-        <Link className='btn btn-lg btn-dark ms-3' to="">Register External Services</Link>
+        <Link className='btn btn btn-dark' to="/student/signup">New Students Apply</Link>
+        <Link className='btn btn btn-dark ms-3' to="/student/signin">Current Students Apply</Link>
+        <Link className='btn btn btn-dark ms-3' to="">Register External Services</Link>
         </div>
       </div>
     </div>

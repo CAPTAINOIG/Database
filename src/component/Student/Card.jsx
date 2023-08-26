@@ -109,7 +109,7 @@ const Card = () => {
           <div className="card">
           <div className="card-body">
             <Link className='text-decoration-none' to="">
-              <h5 id='reg' className="card-title">Registration History</h5>
+              <h5 id='reg1' className="card-title">Registration History</h5>
               <img className='reg' src={regis} alt="" width={70} />
             </Link>
           </div>

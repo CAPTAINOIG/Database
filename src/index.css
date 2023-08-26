@@ -1,6 +1,6 @@
 #signup{
     background-color: white;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 #clas{
   margin-top: 150px; 
@@ -24,7 +24,7 @@
   }
   #reg{
     color: rgb(4,48,64);
-    margin-left: 150px;
+    margin-left: 120px;
   }
   #submit{
     background-color: rgb(4,48,64);
@@ -39,7 +39,7 @@
     margin-top: 20px;
 }
 #up{
-    margin-left: 200px;
+    margin-left: 160px;
     color: rgb(4,48,64);
     background-color: rgb(4,48,64);
     margin-top: 20px;
@@ -81,6 +81,9 @@
   color: rgb(4,48,64);
   width: 90%;
   
+}
+#up{
+  margin-left: 20px;
 }
 #reg{
   color: rgb(4,48,64);

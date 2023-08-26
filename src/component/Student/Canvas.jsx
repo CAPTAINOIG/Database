@@ -34,15 +34,15 @@ const Canvas = () => {
             <h5 className="offcanvas-title text-light" id="offcanvasWithBothOptionsLabel"></h5>
             <button type="button" className="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
-          <img id='oig2' src={oig2} alt="" width={300} />
+          <img id='oig2' src={oig2} alt="" width={200} />
           <div className="offcanvas-body">
-            <p className='text-light fs-2 '>General</p>
+            <p className='text-light fs-3'>General</p>
             <Link className='text-decoration-none' to="">
               <img className='bg-light' src={real} alt="" width={30} /><span className='text-light fs-5 ms-3'>Dashboard</span>
             </Link>
 
             <div>
-              <p className='text-light mt-3 fs-2'>Profile</p>
+              <p className='text-light mt-3 fs-3'>Profile</p>
               <Link className='text-decoration-none' to="">
                 <img className='bg-light' src={prof} alt="" width={30} /><span className='text-light fs-5 ms-4'>My Profile</span>
               </Link>
@@ -58,7 +58,7 @@ const Canvas = () => {
               </Link>
             </div>
 
-            <p className='text-light mt-3 fs-2'>Academics</p>
+            <p className='text-light mt-3 fs-3'>Academics</p>
             <div>
               <Link className='text-decoration-none' to="">
                 <img className='bg-light' src={coursy} alt="" width={30} /><span className='text-light ms-4 fs-5'>Course Registration</span>
@@ -70,7 +70,7 @@ const Canvas = () => {
               </Link>
             </div>
 
-            <p className='text-light  mt-3 fs-2'>Payments</p>
+            <p className='text-light  mt-3 fs-3'>Payments</p>
             <div>
               <Link className='text-decoration-none' to="">
                 <img className='bg-light' src={price} alt="" width={30} /><span className='text-light ms-4 fs-5'>Pay Tuition</span>
@@ -89,7 +89,7 @@ const Canvas = () => {
 
             <div>
               <Link className='text-decoration-none' to="/student/signin">
-                <span className='text-light fs-3'>Logout</span>
+                <span className='text-light fs-5'>Logout</span>
               </Link>
             </div>
           </div>
