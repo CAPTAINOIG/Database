@@ -9,7 +9,7 @@ import Errorpage from './component/Errorpage'
 import Dashboard from './component/Student/Dashboard'
 
 function App() {
-    let token = localStorage.token
+    // let token = localStorage.token
   return (
     <>
     <Routes>
@@ -18,7 +18,7 @@ function App() {
       <Route path='/student/signin' element={<Signin/>}/>
       <Route path='/staff/signup' element={<Staffsignup/>}/>
       <Route path='/staff/signin' element={<Staffsignin/>}/>
-      <Route path='/dashboard' element={token? <Dashboard/>: <Navigate to="/student/signin"/>}/>
+      <Route path='/dashboard' element={<Dashboard/>}/>
       <Route path='/*' element={<Errorpage/>}/>
     </Routes>
     </>
