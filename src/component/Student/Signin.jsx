@@ -7,7 +7,7 @@ import { Link, useNavigate } from 'react-router-dom'
 
 const Signin = () => {
    let navigate = useNavigate()
-    let endpoint = 'http://localhost:2300/student/signin'
+    let endpoint = 'https://database-backend.vercel.app/student/signin'
    
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")

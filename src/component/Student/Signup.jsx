@@ -17,7 +17,9 @@ const Signup = () => {
 
 
     
-    let endpoint = 'http://localhost:2300/student/signup'
+    // let endpoint = 'http://localhost:2300/student/signup'
+    let endpoint = 'https://database-backend.vercel.app/student/signup'
+    
      
     let navigate = useNavigate()
     const formik = useFormik({
