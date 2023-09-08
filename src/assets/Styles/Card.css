@@ -1,0 +1,14 @@
+#top{
+    margin-top: 90px;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(4,48,64);
+}
+#ref{
+    font-weight: bold;
+    color: rgb(4,48,64);
+    text-decoration: none;
+}
+#card2{
+    margin-top: 100px;
+}

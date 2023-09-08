@@ -1,6 +1,14 @@
 #signup{
     background-color: white;
-    margin-top: 10px;
+    margin-top: 20px;
+}
+.imgig{
+  /* background-image: url(./assets/image/image.jpg); */
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 83vh;
+  opacity: 0.8;
 }
 #clas{
   margin-top: 150px; 
@@ -47,7 +55,7 @@
 #buttonA{
   background-color: rgb(4,48,64);
   color: white;
-}
+} 
 
 
 
@@ -59,7 +67,7 @@
   #up{
     margin-left: 0px;
   }
-  .img{
+  .imgig{
     /* background-image: url(./assets/image/image.jpg); */
     background-repeat: no-repeat;
     background-position: center;
@@ -82,6 +90,16 @@
   width: 90%;
   
 }
+#application{
+  margin-top: 200px;
+  font-size: 60px;
+  color: rgb(4,48,64);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.bn{
+  margin-top: 10px;
+}
+
 #up{
   margin-left: 20px;
 }
@@ -91,9 +109,8 @@
 }
 #header{
   background-color: rgb(179,148,113);
-
   width: 100%;
-  height: 5vh;
+  /* height: 5vh; */
 
 }
 #welcome{
@@ -109,8 +126,7 @@
 }
 #background{
   background-color: rgb(4,48,64);
-  width: 100%;
-  height: 350vh;
+  /* width: 100%; */
   
 }
 #portal{
@@ -120,9 +136,9 @@
   background-color: rgb(179,148,113);
 }
 #premium{
-  width: 80%;
+  /* width: 80%; */
   font-family: 'Times New Roman', Times, serif;
-  margin-left: px;
+  margin-left: 100px;
   margin-top: -65px;
   font-size: 10px;
   padding-left: 0px;
@@ -137,6 +153,55 @@
 }
 .profile, .doc, .course, .pass, .fee, .pay, .resources, .reg, .acco, .board, .time, .semester{
   margin-left: 100px;   
+}
+#sectioned{
+  background-color: rgb(4,48,64);
+  height: 282vh;
+}
+
+
+
+#study{
+  font-size: 40px;
+  margin-top: 25px;
+  font-weight: bold;
+  color: rgb(4,48,64);
+}
+#butt{
+  background-color: rgb(4,48,64);
+}
+
+#image{
+  margin-top: 25px;
+  border-radius: 50px;
+}
+#learn{
+  color: black;
+}
+#sss{
+  position: fixed;
+  top: 50%;
+}
+#image1{
+  margin-top: 20px;
+  height: 500px;
+  width: 100%;
+}
+#image11{
+  background-color: rgb(4,48,64);
+
+}
+#alt{
+  position: fixed;
+  top: 90%;
+  display: none;
+}
+#sci{
+  color: rgb(4,48,64);   
+}
+#stock{
+  width: 100%;
+  height: 100%;
 }
 }
  

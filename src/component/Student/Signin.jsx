@@ -7,7 +7,8 @@ import { Link, useNavigate } from 'react-router-dom'
 
 const Signin = () => {
    let navigate = useNavigate()
-    let endpoint = 'https://database-backend.vercel.app/student/signin'
+    // let endpoint = 'https://database-backend.vercel.app/student/signin'
+    let endpoint = 'http://localhost:2300/student/signin'
    
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -15,12 +16,12 @@ const Signin = () => {
 
     const submitDetails = () =>{
         let detail = {email, password}
-        console.log(detail);
+        // console.log(detail);
     
         axios.post(endpoint, detail)
 
         .then((response)=>{
-          console.log(response.data);
+        //   console.log(response.data);
           setMessage(response.data.message)
           if(response.data.status){
             localStorage.token = response.data.token

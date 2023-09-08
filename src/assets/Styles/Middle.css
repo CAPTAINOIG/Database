@@ -1,18 +1,72 @@
-.img{
-    /* background-image: url(./assets/image/image.jpg); */
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 84vh;
-    opacity: 0.6;
- }
- #application{
-    margin-top: -300px;
-    font-size: 100px;
+
+#study{
+    font-size: 70px;
+    margin-top: 25px;
+    font-weight: bold;
     color: rgb(4,48,64);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
- }
- .bn{
-    margin-top: 200px;
- }
- 
+}
+#butt{
+    background-color: rgb(4,48,64);
+}
+
+#image{
+    margin-top: 25px;
+    border-radius: 50px;
+}
+#learn{
+    color: black;
+}
+#sss{
+    position: fixed;
+    top: 50%;
+}
+#image1{
+    margin-top: 20px;
+    height: 500px;
+    width: 100%;
+}
+#image11{
+    background-color: rgb(4,48,64);
+
+}
+#alt{
+    position: fixed;
+    top: 90%;
+    z-index: 2;
+}
+#sci{
+    color: rgb(4,48,64);   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,7 +3,6 @@ import tog from '../Student/image/tog.png'
 import './Styles/Canvas.css'
 import portal from '../Student/image/portal.png'
 import cap from '../Student/image/cap.png'
-import Card from './Card'
 import oig2 from '../Student/image/oig2.png'
 import real from '../Student/image/real.png'
 import prof from '../Student/image/prof.png'
@@ -12,8 +11,16 @@ import documy from '../Student/image/documy.png'
 import coursy from '../Student/image/coursy.png'
 import resou from '../Student/image/resou.png'
 import price from '../Student/image/price.png'
-
-
+import {BiSolidDashboard} from 'react-icons/bi'
+import {ImProfile} from 'react-icons/im'
+import {RiLockPasswordLine} from 'react-icons/ri'
+import {GrDocumentUpdate} from 'react-icons/gr'
+import {SiDiscourse} from 'react-icons/si'
+import {GrResources} from 'react-icons/gr'
+import {FaCcAmazonPay} from 'react-icons/fa'
+import {MdPayment} from 'react-icons/md'
+import {TbHelpOctagonFilled} from 'react-icons/tb'
+import {BiLogOut} from 'react-icons/bi'
 
 import { Link } from 'react-router-dom'
 
@@ -22,6 +29,11 @@ import { Link } from 'react-router-dom'
 
 
 const Canvas = () => {
+  const logout =()=>{
+    localStorage.removeItem('token')
+    // window.location.href = "signIn.html"
+    localStorage.removeItem('myStatus')
+  }
   return (
     <>
       <section id='background'>
@@ -36,60 +48,60 @@ const Canvas = () => {
           </div>
           <img id='oig2' src={oig2} alt="" width={200} />
           <div className="offcanvas-body">
-            <p className='text-light fs-3'>General</p>
-            <Link className='text-decoration-none' to="">
-              <img className='bg-light' src={real} alt="" width={30} /><span className='text-light fs-5 ms-3'>Dashboard</span>
+            <p className='text-light fs-5'>General</p>
+            <Link className='text-decoration-none' to="/dashboard">
+              <BiSolidDashboard className='text-light'/><span className='text-light ms-3'>Dashboard</span>
             </Link>
 
             <div>
-              <p className='text-light mt-3 fs-3'>Profile</p>
-              <Link className='text-decoration-none' to="">
-                <img className='bg-light' src={prof} alt="" width={30} /><span className='text-light fs-5 ms-4'>My Profile</span>
+              <p className='text-light mt-2 fs-5'>Profile</p>
+              <Link className='text-decoration-none' to="/profile">
+                <ImProfile className='text-light'/><span className='text-light ms-4'>My Profile</span>
               </Link>
             </div>
             <div>
-              <Link className='text-decoration-none' to="">
-                <img className='bg-light' src={pass} alt="" width={30} /><span className='text-light fs-5 ms-4'>Change Password</span>
+              <Link className='text-decoration-none' to="/password">
+                <RiLockPasswordLine className='text-light'/><span className='text-light ms-4'>Change Password</span>
               </Link>
             </div>
             <div>
-              <Link className='text-decoration-none' to="">
-                <img className='bg-light' src={documy} alt="" width={30} /><span className='text-light ms-4 fs-5'>Documents</span>
-              </Link>
-            </div>
-
-            <p className='text-light mt-3 fs-3'>Academics</p>
-            <div>
-              <Link className='text-decoration-none' to="">
-                <img className='bg-light' src={coursy} alt="" width={30} /><span className='text-light ms-4 fs-5'>Course Registration</span>
-              </Link>
-            </div>
-            <div>
-              <Link className='text-decoration-none' to="">
-                <img className='bg-light' src={resou} alt="" width={30} /><span className='text-light ms-4 fs-5'>Resources</span>
+              <Link className='text-decoration-none' to="/document">
+                <GrDocumentUpdate className='text-light bg-light'/><span className='text-light ms-4'>Documents</span>
               </Link>
             </div>
 
-            <p className='text-light  mt-3 fs-3'>Payments</p>
+            <p className='text-light mt-2 fs-5'>Academics</p>
             <div>
               <Link className='text-decoration-none' to="">
-                <img className='bg-light' src={price} alt="" width={30} /><span className='text-light ms-4 fs-5'>Pay Tuition</span>
+                <SiDiscourse className='text-light'/><span className='text-light ms-4'>Course Registration</span>
               </Link>
             </div>
             <div>
               <Link className='text-decoration-none' to="">
-                <img className='bg-light' src={price} alt="" width={30} /><span className='text-light ms-4 fs-5'>Payment History</span>
+                <GrResources className='text-light bg-light'/><span className='text-light ms-4'>Resources</span>
+              </Link>
+            </div>
+
+            <p className='text-light  mt-2 fs-5'>Payments</p>
+            <div>
+              <Link className='text-decoration-none' to="">
+                <FaCcAmazonPay className='text-light'/><span className='text-light ms-4'>Pay Tuition</span>
               </Link>
             </div>
             <div>
               <Link className='text-decoration-none' to="">
-                <img className='bg-light' src={price} alt="" width={30} /><span className='text-light ms-4 fs-5'>Transaction History</span>
+                <MdPayment className='text-light'/><span className='text-light ms-4'>Payment History</span>
+              </Link>
+            </div>
+            <div>
+              <Link className='text-decoration-none' to="/help">
+                <TbHelpOctagonFilled className='text-light'/><span className='text-light ms-4'>Help</span>
               </Link>
             </div>
 
             <div>
-              <Link className='text-decoration-none' to="/student/signin">
-                <span className='text-light fs-5'>Logout</span>
+              <Link onClick={logout} className='text-decoration-none' to="/student/signin">
+              <BiLogOut className='text-light'/> <span className='text-light fs-5'>Logout</span>
               </Link>
             </div>
           </div>
@@ -101,7 +113,7 @@ const Canvas = () => {
           <span>UNIVERSITY OF PREMIUM</span>
           <img src={cap} alt="" width={65} />
         </div>
-        <Card />
+       
 
       </section>
 

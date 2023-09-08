@@ -21,12 +21,13 @@ import result from '../Student/image/result.png'
 const Card = () => {
   return (
     <>
-      <div className="container">
-        <div className="row">
+    <section id='sectioned'>
+    <div className="container">
+    <div className="row">
           <div className="col-lg-3">
             <div className="card">
               <div className="card-body">
-                <Link className='text-decoration-none' to="">
+                <Link className='text-decoration-none' to="/profile">
                   <h5 id='profile' className="card-title">Student Profile</h5>
                   <img className='profile' src={prof} alt="" width={70} />
                 </Link>
@@ -37,7 +38,7 @@ const Card = () => {
           <div className="col-lg-3">
           <div className="card">
           <div className="card-body">
-            <Link className='text-decoration-none' to="">
+            <Link className='text-decoration-none' to="/document">
               <h5 id='doc' className="card-title">Document</h5>
               <img className='doc' src={docu} alt="" width={70} />
             </Link>
@@ -47,7 +48,7 @@ const Card = () => {
           <div className="col-lg-3">
           <div className="card">
           <div className="card-body">
-            <Link className='text-decoration-none' to="">
+            <Link className='text-decoration-none' to="/password">
               <h5 id='pass' className="card-title">Reset Password</h5>
               <img className='pass' src={pass} alt="" width={70} />
             </Link>
@@ -79,8 +80,8 @@ const Card = () => {
               <h5 id='fee' className="card-title">Tuition fee</h5>
               <img className='fee' src={tuition} alt="" width={70} />
             </Link>
-          </div>
-        </div>
+            </div>
+            </div>
           </div>
 
           <div className="col-lg-3">
@@ -89,7 +90,7 @@ const Card = () => {
             <Link className='text-decoration-none' to="">
               <h5 id='pay' className="card-title">Payment History</h5>
               <img className='pay' src={pay} alt="" width={70} />
-            </Link>
+              </Link>
           </div>
         </div>
 
@@ -98,13 +99,13 @@ const Card = () => {
           <div id='ca' className="card">
           <div className="card-body">
             <Link className='text-decoration-none' to="">
-              <h5 id='resources' className="card-title">Resources</h5>
+            <h5 id='resources' className="card-title">Resources</h5>
               <img className='resources' src={resou} alt="" width={70} />
             </Link>
           </div>
         </div>
 
-          </div>
+        </div>
           <div className="col-lg-3">
           <div className="card">
           <div className="card-body">
@@ -169,6 +170,7 @@ const Card = () => {
       </div>
     </div>
 
+    </section>
       
 
         

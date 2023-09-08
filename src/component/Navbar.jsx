@@ -2,13 +2,15 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Middle from './Middle'
 import Footer from './Footer'
+import Alumni from './Alumni'
+import Card from './Card'
 
 
 const Navbar = () => {
   return (
     <>
     <nav id='navbar' class="navbar navbar-expand-lg">
-  <div className="container-fluid">
+  <div className="container">
   <Link className="nav-link active text-light fw-bold fs-5" aria-current="page" to="/">Home</Link>
     <button className="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
@@ -35,7 +37,8 @@ const Navbar = () => {
 </nav>
  
   <Middle/>
-  <Footer/>
+  <Alumni/>
+  <Card/>
     </>
   )
 }

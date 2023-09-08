@@ -16,3 +16,7 @@
 .profile, .doc, .course, .pass, .fee, .pay, .resources, .reg, .acco, .board, .time, .semester{
     margin-left: 70px;   
 }
+#sectioned{
+    background-color: rgb(4,48,64);
+    height: 80vh;
+}

@@ -1,0 +1,37 @@
+#do{
+    /* background-color: rgb(4,48,64); */
+    color: white;
+    /* height: 85vh; */
+}
+#table{
+      background-color: rgb(4,48,64);
+}
+.img{
+    width: 10vh;
+    height: 10vh;
+    border: 2px solid rgb(4, 48, 64);
+    border-radius: 100%;
+    
+}
+#modal{
+    border: 2px solid rgb(4, 48, 64);
+    border-radius: 100%;
+    padding: 15px;
+    background-color: rgb(4,48,64);
+    color: white;
+    float: right;
+    margin-top: -70px;
+}
+#example{
+    background-color: rgb(179,148,113);
+}
+#update{
+    background-color: rgb(4,48,64);
+      color: white;
+}
+#doc, #doc2, #doc3{
+    color: rgb(4,48,64);
+}
+#footer3{
+    background-color: rgb(179,148,113);
+}
