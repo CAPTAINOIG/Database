@@ -20,57 +20,57 @@ import aella from '../component/Student/image/aella.png'
 const Alumni = () => {
   return (
     <>
-    <h3 class="container my-4 mt-5">Our alumni work at world-class <br/> companies around the world including</h3>
-    <div class="container">
-        <div class="row">
-            <div class="col-3">
-                <img class="img-fluid" src={google} height="100" width="120" alt="" />
+    <h3 className="container my-4 mt-5">Our alumni work at world-class <br/> companies around the world including</h3>
+    <div className="container">
+        <div className="row">
+            <div className="col-3">
+                <img className="img-fluid" src={google} height="100" width="120" alt="" />
                 
             </div>
-            <div class="col-3">
-                <img class="img-fluid" src={Interswitch}  height="100" width="120" alt="" />
+            <div className="col-3">
+                <img className="img-fluid" src={Interswitch}  height="100" width="120" alt="" />
             </div>
-            <div class="col-3">
-                <img class="img-fluid" src={Andela}  height="100" width="120" alt="" />
+            <div className="col-3">
+                <img className="img-fluid" src={Andela}  height="100" width="120" alt="" />
             </div>
-            <div class="col-3">
-                <img class="img-fluid" src={Microsoft} height="100" width="120" alt="" />        
+            <div className="col-3">
+                <img className="img-fluid" src={Microsoft} height="100" width="120" alt="" />        
             </div>
         </div>
     </div>
 
-    <div class="container my-4">
-        <div class="row">
-            <div class="col-3">
-                <img class="img-fluid" src={Paystack} height="100" width="120" alt="" />
+    <div className="container my-4">
+        <div className="row">
+            <div className="col-3">
+                <img className="img-fluid" src={Paystack} height="100" width="120" alt="" />
                 
             </div>
-            <div class="col-3">
-                <img class="img-fluid" src={brewery}  height="100" width="120" alt="" />
+            <div className="col-3">
+                <img className="img-fluid" src={brewery}  height="100" width="120" alt="" />
             </div>
-            <div class="col-3">
-                <img class="img-fluid" src={wema}  height="100" width="120" alt="" />
+            <div className="col-3">
+                <img className="img-fluid" src={wema}  height="100" width="120" alt="" />
             </div>
-            <div class="col-3">
-                <img class="img-fluid" src={Microsoft} height="100" width="120" alt="" />        
+            <div className="col-3">
+                <img className="img-fluid" src={Microsoft} height="100" width="120" alt="" />        
             </div>
         </div>
     </div>
 
-    <div class="container my-4">
-        <div class="row">
-            <div class="col-3">
-                <img class="img-fluid" src={edozzier} height="100" width="120" alt="" />
+    <div className="container my-4">
+        <div className="row">
+            <div className="col-3">
+                <img className="img-fluid" src={edozzier} height="100" width="120" alt="" />
                 
             </div>
-            <div class="col-3">
-                <img class="img-fluid" src={moneymie}  height="100" width="120" alt="" />
+            <div className="col-3">
+                <img className="img-fluid" src={moneymie}  height="100" width="120" alt="" />
             </div>
-            <div class="col-3">
-                <img class="img-fluid" src={Army}  height="100" width="120" alt="" />
+            <div className="col-3">
+                <img className="img-fluid" src={Army}  height="100" width="120" alt="" />
             </div>
-            <div class="col-3">
-                <img class="img-fluid" src={aella} height="100" width="120" alt="" />        
+            <div className="col-3">
+                <img className="img-fluid" src={aella} height="100" width="120" alt="" />        
             </div>
         </div>
     </div>

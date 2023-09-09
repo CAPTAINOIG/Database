@@ -31,7 +31,7 @@ import { Link } from 'react-router-dom'
 const Canvas = () => {
   const logout =()=>{
     localStorage.removeItem('token')
-    // window.location.href = "signIn.html"
+   
     localStorage.removeItem('myStatus')
   }
   return (
