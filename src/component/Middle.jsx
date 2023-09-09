@@ -44,16 +44,16 @@ const Middle = () => {
       <div className="container my-5">
         <div className="row">
           <div className="col-lg-6 col-md-10 col-sm-12 ">
-            <img id='stock' src={stock} alt="" height={500} width={500} />
+            <img id='stock' src={stock} alt="" height={450} width={500} />
           </div>
           <div id="sci" className="col-lg-6 col-md-10 col-sm-12">
             <h2 className="fw-bold mt-5">SCICT AT A GLANCE</h2>
-            <p className="fw-bold">SQI College of ICT offers both <Link to=""> National Diploma</Link> and <Link to="">Professional Certificate programmes.</Link></p>
+            <p className="fw-bold">SQI College of ICT offers both <Link className='text-decoration-none' to=""> National Diploma</Link> and <Link className='text-decoration-none' to="">Professional Certificate programmes.</Link></p>
 
             <p className="fw-bold mt-5"> The diploma Certificate conforms with the standard National Diploma Certificate obtained in Polytechnics while the Professional certificate is the certificate you earn after taking a professional course here at SQI.</p>
 
             <p className="fw-bold mt-5">You can use the Diploma certificate to seek admissions into the University through Direct Entry or for Higher National Diploma (HND). While the professional Certificate is recognized worldwide not as a degree but as a proof of having undergone professional training in the field for which the certificate is issued.</p>
-            <button type="button" className="btn btn-outline-light btn-lg">Learn More</button> </div>
+            <button type="button" className="btn btn-dark btn-outline-light btn-lg">Learn More</button> </div>
         </div>
       </div>
     </>
