@@ -5,7 +5,7 @@ import Andela from '../component/Student/image/Andela.png'
 import Microsoft from '../component/Student/image/Microsoft.png'
 import Paystack from '../component/Student/image/Paystack.png'
 import brewery from '../component/Student/image/brewery.png'
-import wema from '../component/Student/image/wema.png'
+// import wema from '../component/Student/image/wema.png'
 import edozzier from '../component/Student/image/edozzier.png'
 import moneymie from '../component/Student/image/moneymie.png'
 import Army from '../component/Student/image/Army.png'
@@ -49,7 +49,8 @@ const Alumni = () => {
                 <img className="img-fluid" src={brewery}  height="100" width="120" alt="" />
             </div>
             <div className="col-3">
-                <img className="img-fluid" src={wema}  height="100" width="120" alt="" />
+            <img className="img-fluid" src={Paystack} height="100" width="120" alt="" />
+
             </div>
             <div className="col-3">
                 <img className="img-fluid" src={Microsoft} height="100" width="120" alt="" />        
