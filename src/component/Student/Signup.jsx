@@ -42,6 +42,7 @@ const Signup = () => {
                     setMessage(result.data.message)
                     if (result) {
                         navigate("/student/signin")
+                        localStorage.setItem("result", JSON.stringify(values))
                     }
                     else {
                         navigate("/")

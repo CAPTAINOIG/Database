@@ -7,6 +7,9 @@ import {useNavigate } from 'react-router-dom'
 
 
 const Document = () => {
+
+    let docs = JSON.parse(localStorage.getItem("docs"))
+    console.log(docs._id);
     let navigate = useNavigate()
     const [fileUpload, setFileUpload] = useState("")
     const [myImage, setMyImage] = useState("")
@@ -14,7 +17,8 @@ const Document = () => {
     const [title, setTitle] = useState("O Levels Certificate")
     const [studentDetails, setStudentDetails] = useState([])
 
-    let endpoint = 'http://localhost:2300/student/upload'
+    // let endpoint = 'http://localhost:2300/student/upload'
+    let endpoint = 'https://databackend-lirs.onrender.com/student/upload'
 
 
     useEffect(() => {
@@ -49,7 +53,7 @@ const Document = () => {
         setDescription("")
         setTitle("")
 
-        axios.post(endpoint, { fileUpload })
+        axios.post(endpoint, { fileUpload, id: docs._id })
             .then((response) => {
                 console.log(response.data.myimage);
                 setMyImage(response.data.myimage)

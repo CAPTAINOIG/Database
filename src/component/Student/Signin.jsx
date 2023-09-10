@@ -15,6 +15,9 @@ const Signin = () => {
     const [password, setPassword] = useState("")
     const [message, setMessage] = useState("")
 
+
+    let result = JSON.parse(localStorage.getItem("result"))
+    console.log(result);
     const submitDetails = () =>{
         let detail = {email, password}
         // console.log(detail);

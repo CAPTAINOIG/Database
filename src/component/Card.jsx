@@ -15,7 +15,7 @@ const Card = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-7 col-md-10 col-sm-12 mt-5">
-            <img id='graduate' src={graduate1} width={600} height={500} alt="" />
+            <img id='graduate' src={graduate1} width={500} height={500} alt="" />
           </div>
           <div className="col-lg-5 col-md-10 col-sm-12">
             <h1 id="make" className="fw-bold mt-5">Making Africa a <br /> Tech Continent…</h1>

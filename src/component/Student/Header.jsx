@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom'
 
 
 const Header = ({userInfo}) => {
+  console.log(userInfo);
   return (
     <>
         <div id='header' className='d-flex'>

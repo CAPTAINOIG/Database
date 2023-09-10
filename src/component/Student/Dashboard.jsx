@@ -18,12 +18,18 @@ const Dashboard = () => {
     // setProfile(image)
     
   // }, [])
+
+
+  let result = JSON.parse(localStorage.getItem("result"))
+    console.log(result);
   
   
 
   let navigate = useNavigate()
   let token = localStorage.token
   const endpoint = "http://localhost:2300/student/dashboard"
+  
+  
  
   useEffect(() => {
     axios.get(endpoint,{
@@ -40,8 +46,11 @@ const Dashboard = () => {
         localStorage.removeItem("token")
         navigate("/student/signin")
       } else{
+        
         localStorage.setItem("myStatus", JSON.stringify(response.data.status))
         localStorage.setItem("myProfile", JSON.stringify(response.data))
+        localStorage.setItem("docs", JSON.stringify(response.data.userDetail))
+
       }
     })
   }, [])
