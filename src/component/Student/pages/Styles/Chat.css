@@ -1,0 +1,29 @@
+
+.playbutton{
+    border: 2px solid white;
+    border-radius: 100%;
+    padding: 5px;
+    color: white;
+    background-color: green;
+    cursor: pointer;
+}
+.inputbutton{
+    position: fixed;
+    top: 90%;
+    left: 10%;
+    width: 80%;
+
+}
+#inputbutton{
+    width: 97%;
+}
+#chatty{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+.datey{
+    margin-left: 500px;
+}

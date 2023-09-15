@@ -2,8 +2,15 @@
     background-color: white;
     margin-top: 20px;
 }
+#chat{
+  background-image: url(./component/Student/image/wall3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+
+}
 .imgig{
-  /* background-image: url(./assets/image/image.jpg); */
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
@@ -207,6 +214,19 @@
   width: 100%;
   height: 100%;
   margin-left: 0px;
+}
+.inputbutton{
+  position: fixed;
+  top: 90%;
+  left: 10%;
+  width: 90%;
+
+}
+#inputbutton{
+  width: 85%;
+}
+.datey{
+  margin-left: 150px;
 }
 }
  
