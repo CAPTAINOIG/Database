@@ -15,7 +15,8 @@ const Chat = () => {
     // console.log(socket.current);
     // console.log(date);
     
-    let endpoint = 'http://localhost:2300/'
+    // let endpoint = 'http://localhost:2300/'
+    let endpoint = 'https://databackend-lirs.onrender.com/'
     // let endpoint = 'http://localhost:2300/student/socket'
     
     useEffect(() => {
@@ -52,7 +53,7 @@ const Chat = () => {
             <section id='chat'>
 
                 <div id='chatty' className='container'>
-                <Link to="/dashboard">
+                <Link className='text-light' to="/dashboard">
                     <GrPrevious/>
                 </Link>
                 <span className='datey'>{date}</span>
