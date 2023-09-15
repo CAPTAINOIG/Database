@@ -11,6 +11,7 @@ import Profile from './component/Student/pages/Profile'
 import Document from './component/Student/pages/Document'
 import Help from './component/Student/pages/Help'
 import Password from './component/Student/pages/Password'
+import Chat from './component/Student/pages/Chat'
 
 function App() {
     // let token = localStorage.token
@@ -27,6 +28,7 @@ function App() {
       <Route path='/document' element={<Document/>}/>
       <Route path='/help' element={<Help/>}/>
       <Route path='/password' element={<Password/>}/>
+      <Route path='/chat' element={<Chat/>}/>
       <Route path='/*' element={<Errorpage/>}/>
     </Routes>
     </>

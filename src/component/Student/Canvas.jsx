@@ -21,6 +21,7 @@ import {FaCcAmazonPay} from 'react-icons/fa'
 import {MdPayment} from 'react-icons/md'
 import {TbHelpOctagonFilled} from 'react-icons/tb'
 import {BiLogOut} from 'react-icons/bi'
+import {BsChatDots} from 'react-icons/bs'
 
 import { Link } from 'react-router-dom'
 
@@ -96,6 +97,11 @@ const Canvas = () => {
             <div>
               <Link className='text-decoration-none' to="/help">
                 <TbHelpOctagonFilled className='text-light'/><span className='text-light ms-4'>Help</span>
+              </Link>
+            </div>
+            <div>
+              <Link className='text-decoration-none' to="/chat">
+                <BsChatDots className='text-light'/><span className='text-light ms-4'>Chat</span>
               </Link>
             </div>
 

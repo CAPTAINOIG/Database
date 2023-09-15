@@ -16,7 +16,7 @@ const Header = ({userInfo}) => {
     <>
         <div id='header' className='d-flex'>
         <div id='welcome'>  
-        WELCOME {userInfo.firstName} {userInfo.lastName}
+        WELCOME, {userInfo.firstName} {userInfo.lastName}
         </div>
         <div id='imager'>
             <Link className='ms-5' to=""><img className='mt-3' src={reg} alt="" width={40} /></Link>
