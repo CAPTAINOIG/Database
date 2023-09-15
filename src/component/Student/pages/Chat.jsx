@@ -3,6 +3,9 @@ import socketClient from 'socket.io-client'
 import Canvas from '../Canvas'
 import './Styles/Chat.css'
 import {GiPlayButton} from 'react-icons/gi'
+import { Link } from 'react-router-dom'
+import {GrPrevious} from 'react-icons/gr'
+
 
 const Chat = () => {
     const [message, setMessage] = useState("")
@@ -49,6 +52,9 @@ const Chat = () => {
             <section id='chat'>
 
                 <div id='chatty' className='container'>
+                <Link to="/dashboard">
+                    <GrPrevious/>
+                </Link>
                 <span className='datey'>{date}</span>
                 {
                     allMessages.map((msg, index) => (
