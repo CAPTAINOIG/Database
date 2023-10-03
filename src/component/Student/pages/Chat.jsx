@@ -53,8 +53,8 @@ const Chat = () => {
             <section id='chat'>
 
                 <div id='chatty' className='container'>
-                <Link className='text-light' to="/dashboard">
-                    <GrPrevious/>
+                <Link to="/dashboard">
+                    <GrPrevious className='text-light bg-light rounded'/>
                 </Link>
                 <span className='datey'>{date}</span>
                 {
@@ -62,7 +62,7 @@ const Chat = () => {
                         <div key={index}>
                        
                             <span>{msg}</span>  
-                            <span>{time}</span>  
+                             
 
                             </div>
                         ))
@@ -72,7 +72,7 @@ const Chat = () => {
                 <div className="inputbutton">
                 <input id='inputbutton' placeholder='Message' className='rounded' type="text" onChange={(e) => setMessage(e.target.value)} value={message}/>
                     <span className='playbutton'>
-                    <GiPlayButton  onClick={sendMessage}>Send Message</GiPlayButton>
+                    <GiPlayButton onClick={sendMessage}>Send Message</GiPlayButton>
                     </span>
                 </div>
 

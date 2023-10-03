@@ -17,7 +17,7 @@ const Signin = () => {
 
 
     let result = JSON.parse(localStorage.getItem("result"))
-    console.log(result);
+    // console.log(result);
     const submitDetails = () =>{
         let detail = {email, password}
         // console.log(detail);

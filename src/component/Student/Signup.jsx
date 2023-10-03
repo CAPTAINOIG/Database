@@ -32,8 +32,6 @@ const Signup = () => {
             dob: "",
             matric: `CA2023${Math.round(Math.random() * 100000)}`,
             phone: "",
-
-
         },
         onSubmit: (values) => {
             axios.post(endpoint, values)
