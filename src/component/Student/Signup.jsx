@@ -3,10 +3,12 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useFormik } from 'formik'
 import * as Yup from "yup"
+import { FiLoader } from 'react-icons/fi'
 
 
 const Signup = () => {
     const [message, setMessage] = useState("")
+    const [loading, setLoading] = useState(false)
     // const [studentDetails, setStudentDetails] = useState([])
 
 
@@ -15,6 +17,7 @@ const Signup = () => {
     let upper = new RegExp(`(?=.*[A-Z])`);
     let number = new RegExp(`(?=.*[0-9])`);
     let length = new RegExp(`(?=.{8,})`);
+
 
 
 
@@ -34,8 +37,10 @@ const Signup = () => {
             phone: "",
         },
         onSubmit: (values) => {
+            setLoading(true)
             axios.post(endpoint, values)
                 .then((result) => {
+                    setLoading("")
                     console.log(result.data);
                     setMessage(result.data.message)
                     if (result) {
@@ -48,6 +53,7 @@ const Signup = () => {
                 })
                 .catch((err) => {
                     console.log(err);
+                    setLoading(false)
                 })
 
 
@@ -72,7 +78,7 @@ const Signup = () => {
     return (
         <>
             <section id='section' className='border'>
-                <div id='signup' className="col-lg-4 shadow px-3 mx-auto">
+                <div id='signup' className="col-lg-4 shadow rounded px-3 mx-auto">
                     <div className={message == "" ? "" : "alert alert-success"}>{message}</div>
                     <h1 id='reg' className='fw-bold'>SIGN UP</h1>
                     <form action="" onSubmit={formik.handleSubmit}>
@@ -114,7 +120,8 @@ const Signup = () => {
                         </div>
 
 
-                        <button id='submit' type='submit' className='btn text-light w-100 fs-5 fw-bold rounded my-3'>Submit</button>
+                        <button id='submit' type='submit' className='btn text-light w-100 fs-5 fw-bold rounded my-3'>
+                            {loading ? <FiLoader /> : 'Submit'}</button>
 
                     </form>
                 </div>

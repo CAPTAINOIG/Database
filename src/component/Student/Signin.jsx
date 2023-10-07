@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-
+import {FiLoader} from 'react-icons/fi'
 
 
 
@@ -14,11 +14,13 @@ const Signin = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [message, setMessage] = useState("")
+    const [loading, setLoading] = useState(false)
 
 
     let result = JSON.parse(localStorage.getItem("result"))
     // console.log(result);
     const submitDetails = () =>{
+        setLoading(true)
         let detail = {email, password}
         // console.log(detail);
     
@@ -26,6 +28,7 @@ const Signin = () => {
 
         .then((response)=>{
         //   console.log(response.data);
+        setLoading("")
           setMessage(response.data.message)
           if(response.data.status){
             localStorage.token = response.data.token
@@ -35,13 +38,14 @@ const Signin = () => {
         })
         .catch((err)=>{
             console.log(err);
+            setLoading(false)
         })
     
       }
     return (
         <>
         <section id='sectionA' className='border'>
-            <div id='signin' className="col-lg-4 mx-auto bg-light px-2 my-5">
+            <div id='signin' className="col-lg-4 mx-auto rounded bg-light px-4 my-5">
             <div id='clas' className={message == "" ? "" : "alert alert-danger"}>{message}</div>
                 <h1 id='page' className="text-center fw-bold text-decoration-underline">
                     Sign In Page
@@ -55,7 +59,9 @@ const Signin = () => {
                 <label className='signin' htmlFor="">PASSWORD</label>
                     <input type="text" placeholder="Enter Your password" className="form-control my-3" onChange={(e) => setPassword(event.target.value)} value={password} />
                 </div>
-                <button id='buttonA' className='btn form-control fs-5 fw-bold' onClick={submitDetails}>submit</button>
+                <button id='buttonA' className='btn form-control fs-5 fw-bold' onClick={submitDetails}>
+                {loading ? <FiLoader/> : 'Submit'}
+                </button>
                 <div className="d-flex">
                     <p id='mem' className='fs-5'>Not a member?</p> 
                     <span><Link className='text-decoration-none fs-5 text-light mb-3 btn' id='up' to="/Student/Signup">Sign up now</Link></span>
