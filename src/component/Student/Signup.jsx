@@ -3,7 +3,8 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useFormik } from 'formik'
 import * as Yup from "yup"
-import { FiLoader } from 'react-icons/fi'
+// import { FiLoader } from 'react-icons/fi'
+import gif from '../Student/image/gif.gif'
 
 
 const Signup = () => {
@@ -121,7 +122,7 @@ const Signup = () => {
 
 
                         <button id='submit' type='submit' className='btn text-light w-100 fs-5 fw-bold rounded my-3'>
-                            {loading ? <FiLoader /> : 'Submit'}</button>
+                            {loading ? <img src={gif} alt="" width={25} /> : 'Submit'}</button>
 
                     </form>
                 </div>

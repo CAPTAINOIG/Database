@@ -14,6 +14,9 @@ import acco from '../Student/image/acco.png'
 import board from '../Student/image/board.png'
 import timey from '../Student/image/timey.png'
 import result from '../Student/image/result.png'
+import {BiHelpCircle} from 'react-icons/bi'
+import {BsFillChatDotsFill} from 'react-icons/bs'
+import {FaCcAmazonPay} from 'react-icons/fa'
 
 
 
@@ -76,21 +79,25 @@ const Card = () => {
           <div className="col-lg-3">
           <div className="card">
           <div className="card-body">
-            <Link className='text-decoration-none' to="">
-              <h5 id='fee' className="card-title">Tuition fee</h5>
-              <img className='fee' src={tuition} alt="" width={70} />
+            <Link className='text-decoration-none' to="/help">
+            <div className='text-center text-dark'>
+              <h5 className="card-title ">Help</h5>
+              <BiHelpCircle  size={70}/>
+              </div>
             </Link>
             </div>
             </div>
           </div>
 
           <div className="col-lg-3">
-          <div id='ca' className="card">
+          <div className="card">
           <div className="card-body">
-            <Link className='text-decoration-none' to="">
-              <h5 id='pay' className="card-title">Payment History</h5>
-              <img className='pay' src={pay} alt="" width={70} />
-              </Link>
+          <Link className='text-decoration-none' to="/pay">
+          <div className='text-center text-dark'>
+            <h5 className="card-title ">Pay Tuition</h5>
+              <FaCcAmazonPay  size={70}/>
+              </div>
+            </Link>
           </div>
         </div>
 
@@ -126,9 +133,11 @@ const Card = () => {
         <div className="col-lg-3">
         <div className="card">
           <div className="card-body">
-            <Link className='text-decoration-none' to="">
-              <h5 id='acco' className="card-title">Accomodation</h5>
-              <img className='acco' src={acco} alt="" width={90} />
+            <Link className='text-decoration-none' to="/chat">
+            <div className='text-center text-dark'>
+              <h5  className="card-title">Chat</h5>
+              <BsFillChatDotsFill size={70}/>
+            </div>
             </Link>
           </div>
         </div>

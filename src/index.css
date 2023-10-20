@@ -37,6 +37,21 @@
     background-color: rgb(4,48,64);
     height: 100vh;
   }
+  #paystack{
+    background-color: rgb(4,48,64);
+    height: 100vh;
+  }
+  #Payment{
+    margin-top: 10px;
+  }
+  #paymentHeader{
+    font-size: 50px;
+    color: white;
+  }
+  #payButton{
+    background-color: rgb(4,48,64);
+    color: white;
+  }
   #reg{
     color: rgb(4,48,64);
     margin-left: 120px;

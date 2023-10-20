@@ -1,7 +1,8 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import {FiLoader} from 'react-icons/fi'
+// import {FiLoader} from 'react-icons/fi'
+import gif from '../Student/image/gif.gif'
 
 
 
@@ -60,7 +61,7 @@ const Signin = () => {
                     <input type="text" placeholder="Enter Your password" className="form-control my-3" onChange={(e) => setPassword(event.target.value)} value={password} />
                 </div>
                 <button id='buttonA' className='btn form-control fs-5 fw-bold' onClick={submitDetails}>
-                {loading ? <FiLoader/> : 'Submit'}
+                {loading ? <img src={gif} alt="" width={25} /> : 'Submit'}
                 </button>
                 <div className="d-flex">
                     <p id='mem' className='fs-5'>Not a member?</p> 
