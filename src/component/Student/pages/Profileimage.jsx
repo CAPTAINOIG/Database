@@ -58,7 +58,6 @@ const Profileimage = () => {
             <CardBody>
                 <div>
                     <div className="position: relative" >
-
                         <div
                             style={{
                                 maxWidth: '120px',
