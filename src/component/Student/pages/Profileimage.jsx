@@ -74,7 +74,7 @@ const Profileimage = () => {
                                 <Camera style={{ position: 'absolute', right: 10, top: 5, color: 'red' }} />
                             </Label>
                             <input type="file" id='file' className="d-none" onChange={e => changeFile(e)} />
-                            <div  className='bg-dark' type='submit' onClick={upload}>
+                            <div  className='bg-light' type='submit' onClick={upload}>
                             {loader ? <img src={load2} alt="" height={30} /> : <GrUpload size={15} />}</div>                            
                         </div>
                     </div> 
