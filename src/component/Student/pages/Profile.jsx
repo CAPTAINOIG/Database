@@ -44,10 +44,11 @@ const Profile = () => {
 
   return (
     <>
-      <Canvas />
-      <section id='info'>
-        <div className="container text-center">
-          <h1 className='info'>PERSONAL INFORMATION</h1>
+    <Canvas />
+    <section id='info'>
+    <div className="container text-center">
+    <h1 className='info'>PERSONAL INFORMATION</h1>
+    <Profileimage/>
           <div className="row">
             <div className='col-lg-6'>
               <p>FIRST NAME</p>
@@ -94,7 +95,6 @@ const Profile = () => {
           </div>
         </div>
       </section>
-      <Profileimage/>
 
 
     </>

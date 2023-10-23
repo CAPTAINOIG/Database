@@ -3,7 +3,7 @@ import Canvas from '../Canvas'
 import './Styles/Document.css'
 import axios from 'axios'
 import { BiSolidJoystickButton } from 'react-icons/bi'
-import {useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 const Document = () => {
@@ -22,11 +22,15 @@ const Document = () => {
 
 
     useEffect(() => {
-      if(!localStorage.myStatus){
-        navigate("/student/signin")
-      }
+       let store = JSON.parse(localStorage.getItem("imageStore"))
+       console.log(store);
+        setMyImage(store)
+        if (!localStorage.myStatus) {
+            navigate("/student/signin")
+        }
     }, [])
-    
+
+
 
     const changeFile = (e) => {
         let myImage = e.target.files[0]
@@ -35,6 +39,7 @@ const Document = () => {
         reader.onload = () => {
             console.log(reader.result);
             setFileUpload(reader.result)
+
         }
     }
 
@@ -45,18 +50,19 @@ const Document = () => {
     let time = new Date().toLocaleTimeString()
 
     const upload = () => {
+        
         let data = { title, description, date, time }
-        console.log(data);
+        console.log(data);    
+        axios.post(endpoint, { fileUpload })
+        .then((response) => {
+            console.log(response.data.myimage);
+            setMyImage(response.data.myimage)
+            localStorage.setItem("imageStore", JSON.stringify(response.data.myimage))
+            setStudentDetails([...studentDetails, data]);
+    
+            setDescription("")
+            setTitle("")
 
-        setStudentDetails([...studentDetails, data]);
-
-        setDescription("")
-        setTitle("")
-
-        axios.post(endpoint, { fileUpload, id: docs._id })
-            .then((response) => {
-                console.log(response.data.myimage);
-                setMyImage(response.data.myimage)
             })
             .catch((err) => {
                 console.log(err);
@@ -79,10 +85,10 @@ const Document = () => {
 
                 </div>
 
-                <div  className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div className="modal-dialog">
                         <div className="modal-content">
-                          
+
                             <div id='example' className="modal-body">
                                 <div id='doc' className='text-center fw-bold my-3'>DOCUMENT UPLOAD</div>
                                 <label id='doc2' className='fw-bold' htmlFor="">Title</label>
@@ -91,17 +97,18 @@ const Document = () => {
                                     <option value="Post Secondary Certificate">Post Secondary Certificate</option>
                                     <option value="Others">Others</option>
                                 </select>
-                                
+
                                 <label id='doc3' className='fw-bold' htmlFor="">Description</label>
                                 <input type="text" className='fom-control w-100 my-3' onChange={(e) => setDescription(e.target.value)} placeholder='Description' value={description} />
                             </div>
                             <div className="modal-footer" id='footer3'>
-                                <input className='' id='update' type="file" onChange={(e) => changeFile(e)} />
+                                <input className='' id='update' type="file" onChange={e => changeFile(e)} />
                                 <button type="button" id='update' onClick={upload} className="btn" data-bs-dismiss="modal">UPDATE</button>
                             </div>
                         </div>
                     </div>
                 </div>
+                <img className='img' src={myImage} alt="" />
             </section>
 
 
@@ -117,17 +124,17 @@ const Document = () => {
 
                 {
                     studentDetails.map((item, index) => (
-                        <tr>
+                        <tr key={index}>
                             <td>{index + 1}</td>
                             <td>{item.title}</td>
                             <td>{item.description}</td>
                             <td>{item.date}</td>
                             <td>{item.time}</td>
-                            <td><img className='img' src={myImage} alt="" /></td>
                         </tr>
                     ))
                 }
             </table>
+
         </>
     )
 }
