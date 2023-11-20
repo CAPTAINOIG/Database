@@ -24,7 +24,7 @@ const Signup = () => {
 
     // let endpoint = 'http://localhost:2300/student/signup'
     let endpoint = 'https://databackend-lirs.onrender.com/student/signup'
-    // https://databackend-lirs.onrender.com/student/signup
+   
 
     let navigate = useNavigate()
     const formik = useFormik({
@@ -55,6 +55,10 @@ const Signup = () => {
                 .catch((err) => {
                     console.log(err);
                     setLoading(false)
+                    if(err.response.status == 409) {
+                        console.log("duplicate user found");
+                        setMessage('duplicate user found')
+                    }
                 })
 
 
