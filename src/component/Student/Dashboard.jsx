@@ -48,7 +48,7 @@ const Dashboard = () => {
       }
     })
     .then((response)=>{
-      console.log(response);
+      console.log(response.data.userDetail);
       setUserInfo(response.data.userDetail)
       if(!response.data.status){
         localStorage.removeItem("token")
