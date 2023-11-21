@@ -22,8 +22,8 @@ const Signup = () => {
 
 
 
-    let endpoint = 'http://localhost:2300/student/signup'
-    // let endpoint = 'https://databackend-lirs.onrender.com/student/signup'
+    // let endpoint = 'http://localhost:2300/student/signup'
+    let endpoint = 'https://databackend-lirs.onrender.com/student/signup'
    
 
     let navigate = useNavigate()

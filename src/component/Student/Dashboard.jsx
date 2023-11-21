@@ -34,8 +34,8 @@ const Dashboard = () => {
     
 
   
-  const endpoint = "http://localhost:2300/student/dashboard"
-  // let endpoint = 'https://databackend-lirs.onrender.com/student/dashboard'
+  // const endpoint = "http://localhost:2300/student/dashboard"
+  let endpoint = 'https://databackend-lirs.onrender.com/student/dashboard'
   
   
  
