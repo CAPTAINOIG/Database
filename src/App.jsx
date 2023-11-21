@@ -13,6 +13,7 @@ import Help from './component/Student/pages/Help'
 import Password from './component/Student/pages/Password'
 import Chat from './component/Student/pages/Chat'
 import Pay from './component/Student/pages/Pay'
+// <Route path='dashboard/*' element={<Dashboard/>}/>
 
 function App() {
     // let token = localStorage.token

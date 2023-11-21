@@ -19,17 +19,23 @@ const Dashboard = () => {
     
   // }, [])
 
+  let navigate = useNavigate()
+  let token = localStorage.token
 
   let result = JSON.parse(localStorage.getItem("result"))
     // console.log(result);
   
   
+    // useEffect(() => {
+    //   if(!token){
+    //     navigate('/signin')
+    //   }
+    // }, [])
+    
 
-  let navigate = useNavigate()
-  let token = localStorage.token
   
-  // const endpoint = "http://localhost:2300/student/dashboard"
-  let endpoint = 'https://databackend-lirs.onrender.com/student/dashboard'
+  const endpoint = "http://localhost:2300/student/dashboard"
+  // let endpoint = 'https://databackend-lirs.onrender.com/student/dashboard'
   
   
  
@@ -42,7 +48,7 @@ const Dashboard = () => {
       }
     })
     .then((response)=>{
-      // console.log(response.data.userDetail);
+      console.log(response);
       setUserInfo(response.data.userDetail)
       if(!response.data.status){
         localStorage.removeItem("token")

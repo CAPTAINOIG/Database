@@ -8,8 +8,8 @@ import gif from '../Student/image/gif.gif'
 
 const Signin = () => {
    let navigate = useNavigate()
-    let endpoint = 'https://databackend-lirs.onrender.com/student/signin'
-    // let endpoint = 'http://localhost:2300/student/signin'
+    // let endpoint = 'https://databackend-lirs.onrender.com/student/signin'
+    let endpoint = 'http://localhost:2300/student/signin'
     
    
     const [email, setEmail] = useState("")
@@ -28,18 +28,25 @@ const Signin = () => {
         axios.post(endpoint, detail)
 
         .then((response)=>{
-        //   console.log(response.data);
-        setLoading("")
+          console.log(response.data);
           setMessage(response.data.message)
-          if(response.data.status){
+        setLoading("")
+          if(response.data){
             localStorage.token = response.data.token
             // navigate("/dashboard", {state: {authData: response?.data, token:response?.token }})
              navigate("/dashboard")
           }
         })
-        .catch((err)=>{
+        .catch((err) => {
             console.log(err);
             setLoading(false)
+            if(err.response.status == 404) {
+                console.log("Wrong email, please type the correct email");
+                setMessage('Wrong email, please type the correct email')
+            } else if(err.response.status === 401){
+                console.log("Wrong password, please type the correct password");
+                setMessage("Wrong password, please type the correct password")
+            }  
         })
     
       }

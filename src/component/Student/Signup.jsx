@@ -22,8 +22,8 @@ const Signup = () => {
 
 
 
-    // let endpoint = 'http://localhost:2300/student/signup'
-    let endpoint = 'https://databackend-lirs.onrender.com/student/signup'
+    let endpoint = 'http://localhost:2300/student/signup'
+    // let endpoint = 'https://databackend-lirs.onrender.com/student/signup'
    
 
     let navigate = useNavigate()
@@ -84,7 +84,7 @@ const Signup = () => {
         <>
             <section id='section' className='border'>
                 <div id='signup' className="col-lg-4 shadow rounded px-3 mx-auto">
-                    <div className={message == "" ? "" : "alert alert-success"}>{message}</div>
+                    <div className={message == "" ? "" : "alert alert-danger"}>{message}</div>
                     <h1 id='reg' className='fw-bold'>SIGN UP</h1>
                     <form action="" onSubmit={formik.handleSubmit}>
 
