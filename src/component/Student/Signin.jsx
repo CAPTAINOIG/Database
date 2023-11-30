@@ -29,10 +29,12 @@ const Signin = () => {
 
         .then((response)=>{
           console.log(response.data);
+          localStorage.setItem("real", JSON.stringify(response.data.user.email))
           setMessage(response.data.message)
         setLoading("")
           if(response.data){
             localStorage.token = response.data.token
+
             // navigate("/dashboard", {state: {authData: response?.data, token:response?.token }})
              navigate("/dashboard")
           }
@@ -74,6 +76,7 @@ const Signin = () => {
                     <p id='mem' className='fs-5'>Not a member?</p> 
                     <span><Link className='text-decoration-none fs-5 text-light mb-3 btn' id='up' to="/Student/Signup">Sign up now</Link></span>
                     </div>
+                    <Link to="/passwordrecovery">Forgot Password</Link>
             </div>
             </section>
         </>

@@ -13,6 +13,8 @@ import Help from './component/Student/pages/Help'
 import Password from './component/Student/pages/Password'
 import Chat from './component/Student/pages/Chat'
 import Pay from './component/Student/pages/Pay'
+import Passwordrecovery from './component/Student/pages/Passwordrecovery'
+import ResetPassword from './component/Student/pages/Resestpassword'
 // <Route path='dashboard/*' element={<Dashboard/>}/>
 
 function App() {
@@ -32,6 +34,9 @@ function App() {
       <Route path='/password' element={<Password/>}/>
       <Route path='/chat' element={<Chat/>}/>
       <Route path='/pay' element={<Pay/>}/>
+      <Route path='/passwordrecovery' element={<Passwordrecovery/>}/>
+      <Route path='/reset' element={<ResetPassword/>}/>
+
       <Route path='/*' element={<Errorpage/>}/>
     </Routes>
     </>
