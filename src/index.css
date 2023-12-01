@@ -78,7 +78,30 @@
   background-color: rgb(4,48,64);
   color: white;
 } 
+.passwordrecovery{
+  background-color: rgb(4,48,64);
+  height: 100vh;
+}
 
+#passrec{
+  margin-top: 120px;
+}
+#reset{
+  margin-top: 50px;
+}
+.underline{
+  text-decoration: none;
+  color: rgb(4,48,64);
+  font-weight: bold;
+}
+.arr{
+  margin-left: 100px;
+}
+#forgpass{
+  margin-left: 120px;
+  text-decoration: none;
+  color: rgb(4,48,64);
+}
 
 
 
@@ -88,6 +111,12 @@
 @media(max-width: 600px){
   #up{
     margin-left: 0px;
+  }
+  #forgpass{
+    margin-left: 20px;
+    font-size: 15px;
+    text-decoration: none;
+    color: rgb(4,48,64);
   }
   .imgig{
     /* background-image: url(./assets/image/image.jpg); */
@@ -250,6 +279,9 @@
 }
 .datey{
   margin-left: 120px;
+}
+.arr{
+  margin-left: 70px;
 }
 }
  
