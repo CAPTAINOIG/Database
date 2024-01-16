@@ -8,8 +8,8 @@ import gif from '../Student/image/gif.gif'
 
 const Signin = () => {
     let navigate = useNavigate()
-    let endpoint = 'https://databackend-lirs.onrender.com/student/signin'
-    // let endpoint = 'http://localhost:2300/student/signin'
+    // let endpoint = 'https://databackend-lirs.onrender.com/student/signin'
+    let endpoint = 'http://localhost:2300/student/signin'
 
 
     const [email, setEmail] = useState("")
@@ -28,8 +28,8 @@ const Signin = () => {
         axios.post(endpoint, detail)
 
             .then((response) => {
-                console.log(response.data);
-                localStorage.setItem("real", JSON.stringify(response.data.user.email))
+                console.log(response.data.user._id);
+                localStorage.setItem("real", JSON.stringify(response.data.user._id))
                 setMessage(response.data.message)
                 setLoading("")
                 if (response.data) {

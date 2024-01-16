@@ -52,12 +52,12 @@ const Dashboard = () => {
       setUserInfo(response.data.userDetail)
       if(!response.data.status){
         localStorage.removeItem("token")
-        navigate("/student/signin")
+        // navigate("/student/signin")
       } else{
         localStorage.setItem("myStatus", JSON.stringify(response.data.status))
         localStorage.setItem("myProfile", JSON.stringify(response.data))
         localStorage.setItem("docs", JSON.stringify(response.data.userDetail))
-
+        localStorage.setItem("mail", JSON.stringify(response.data.userDetail.email))
       }
     })
   }, [])

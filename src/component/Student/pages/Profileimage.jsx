@@ -3,14 +3,21 @@ import React, { useEffect, useState } from 'react'
 import { Camera, Loader } from "react-feather";
 import { Button, CardBody, Label } from "reactstrap";
 import avatar from '../pages/avatar.webp'
-import load2 from '../image/load2.gif'
-import {GrUpload} from 'react-icons/gr'
+import gif from '../image/gif.gif'
+
 
 
 const Profileimage = () => {
+    const id = JSON.parse(localStorage.getItem('real'))
+    // console.log(id);
+
     const [myImage, setMyImage] = useState("")
     const [fileUpload, setFileUpload] = useState("")
-    const [loader, setLoader] = useState(false)
+    const [loading, setLoading] = useState(false)
+    const [message, setMessage] = useState('')
+
+    // console.log(email);
+
 
     // let endpoint = 'http://localhost:2300/student/upload'
     let endpoint = 'https://databackend-lirs.onrender.com/student/upload'
@@ -18,67 +25,65 @@ const Profileimage = () => {
 
     useEffect(() => {
         let store = JSON.parse(localStorage.getItem("profileImage"))
-        console.log(store);
+        // console.log(store);
         setMyImage(store)
-      
     }, [])
-    
+
 
     const changeFile = (e) => {
-        // console.log(e.target.files[0]);
-        let myImage = e.target.files[0]
-        let reader = new FileReader()
-        // to base 64
-        reader.readAsDataURL(myImage)
+        let myImage = e.target.files[0];
+        let reader = new FileReader();
+        reader.readAsDataURL(myImage);
         reader.onload = () => {
-            console.log(reader.result);
-            // set to myFile
-            setFileUpload(reader.result)
-            setLoader(false)
-        }
-    }
+            // console.log(reader.result);
+            setFileUpload(reader.result);
+        };
+    };
 
     const upload = () => {
-        setLoader(true)
-        axios.post(endpoint, { fileUpload })
+        setLoading(true)
+        const data = { fileUpload, id };
+        // console.log(data);
+        // console.log(data);
+        axios.post(endpoint, data)
             .then((response) => {
-                console.log(response.data.myimage);
-                setMyImage(response.data.myimage)
-                localStorage.setItem("profileImage", JSON.stringify(response.data.myimage))
-                setLoader(false)
+                // console.log(response);
+                setMyImage(response.data.uploadResult.secure_url);
+                localStorage.setItem("profileImage", JSON.stringify(response.data.uploadResult.secure_url));
+                setMessage(response.data.message);
+                setTimeout(() => {
+                    setMessage('');
+                }, 4000);
+                setLoading(false)
             })
             .catch((err) => {
-                console.log(err);
-                setLoader(false)
+                // console.log(err);
+                if (err.response.status == 500) {
+                    // console.log("Error uploading picture");
+                    setMessage('Error uploading picture')
+
+                }
+                setLoading(false)
             })
-    }
+    };
     return (
         <>
 
             <CardBody>
                 <div>
-                    <div className="position: relative" >
-                        <div
-                            style={{
-                                maxWidth: '120px',
-                                position: 'relative'
-                            }}
-                        >
-                            <img style={{
-                                maxWidth: '120px',
-                                position: 'relative'
-                            }} src={myImage || avatar} alt="" />
+                    <div style={{ maxWidth: '120px', position: 'relative' }}>
+                        <img style={{ maxWidth: '120px', position: 'relative' }} src={myImage || avatar} alt="" />
+                        <Label for="file" style={{ cursor: 'pointer' }}>
+                            <Camera style={{ position: 'absolute', right: 10, top: 5, color: 'red' }} />
+                        </Label>
+                        <input type="file" id="file" className="d-none" onChange={(e) => changeFile(e)} />
+                        <Button id='upload' onClick={upload} style={{ marginTop: '10px' }}>
+                            {loading ? <img src={gif} alt="" width={25} /> : 'Upload'}
+                        </Button>
+                        <p className='fs'>{message}</p>
+                    </div>
 
-                            <Label for="file" style={{ cursor: 'pointer' }}>
-                                <Camera style={{ position: 'absolute', right: 10, top: 5, color: 'red' }} />
-                            </Label>
-                            <input type="file" id='file' className="d-none" onChange={e => changeFile(e)} />
-                            <div  className='bg-light' type='submit' onClick={upload}>
-                            {loader ? <img src={load2} alt="" height={30} /> : <GrUpload size={15} />}</div>                            
-                        </div>
-                    </div> 
                 </div>
-                
             </CardBody>
 
 

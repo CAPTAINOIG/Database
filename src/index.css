@@ -52,6 +52,13 @@
     background-color: rgb(4,48,64);
     color: white;
   }
+  .fs{
+    size: 2px;
+ 
+  }
+  #upload{
+    background-color: rgb(4,48,64);;
+  }
   #reg{
     color: rgb(4,48,64);
     margin-left: 120px;

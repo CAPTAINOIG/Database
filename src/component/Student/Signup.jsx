@@ -33,6 +33,8 @@ const Signup = () => {
             lastName: "",
             email: "",
             password: "",
+            image: "",
+            logo: "",
             dob: "",
             matric: `CA2023${Math.round(Math.random() * 100000)}`,
             phone: "",
