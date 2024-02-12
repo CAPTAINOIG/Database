@@ -8,8 +8,8 @@ import gif from '../Student/image/gif.gif'
 
 const Signin = () => {
     let navigate = useNavigate()
-    // let endpoint = 'https://databackend-lirs.onrender.com/student/signin'
-    let endpoint = 'http://localhost:2300/student/signin'
+    let endpoint = 'https://databackend-lirs.onrender.com/student/signin'
+    // let endpoint = 'http://localhost:2300/student/signin'
 
 
     const [email, setEmail] = useState("")
