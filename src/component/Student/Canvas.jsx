@@ -23,17 +23,19 @@ import {TbHelpOctagonFilled} from 'react-icons/tb'
 import {BiLogOut} from 'react-icons/bi'
 import {BsChatDots} from 'react-icons/bs'
 
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 
 
 
 const Canvas = () => {
+  const navigate = useNavigate()
+
   const logout =()=>{
     localStorage.removeItem('token')
-   
     localStorage.removeItem('myStatus')
+    navigate("/student/signin")
   }
   return (
     <>
@@ -116,7 +118,7 @@ const Canvas = () => {
         <div className='d-flex' id='premium'>
 
           <img src={portal} alt="" width={50} />
-          <span>UNIVERSITY OF PREMIUM</span>
+          <span>CAPTAIN COLLEGE</span>
           <img src={cap} alt="" width={65} />
         </div>
        

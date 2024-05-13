@@ -70,7 +70,7 @@ const Signin = () => {
                             <div>
                                 <label className='signin' htmlFor="">PASSWORD</label>
                             </div>
-                            <Link id='forgpass' to="/passwordrecovery">Forgotten your Password?*</Link>
+                            <Link id='forgpass' to="/passwordrecovery">Forgot Password?*</Link>
                         </div>
                         <input type="text" placeholder="Enter Your password" className="form-control my-3" onChange={(e) => setPassword(event.target.value)} value={password} />
                     </div>
@@ -79,7 +79,7 @@ const Signin = () => {
                     </button>
                     <div className="d-flex">
                         <p id='mem' className='mt-4'>Not a member?</p>
-                        <span><Link className='text-decoration-none fs-5 text-light mb-3 btn' id='up' to="/Student/Signup">Sign up now</Link></span>
+                        <span><Link className='text-decoration-none text-light mb-3 btn' id='up' to="/Student/Signup">Sign up now</Link></span>
                     </div>
                 </div>
             </section>

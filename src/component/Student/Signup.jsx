@@ -11,10 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Signup = () => {
-    // const [message, setMessage] = useState("")
     const [loading, setLoading] = useState(false)
-    // const [studentDetails, setStudentDetails] = useState([])
-
 
 
     let lower = new RegExp(`(?=.*[a-z])`);
@@ -22,11 +19,8 @@ const Signup = () => {
     let number = new RegExp(`(?=.*[0-9])`);
     let length = new RegExp(`(?=.{8,})`);
 
-
-
-
-    let endpoint = 'http://localhost:2300/student/signup'
-    // let endpoint = 'https://databackend-lirs.onrender.com/student/signup'
+    // let endpoint = 'http://localhost:2300/student/signup'
+    let endpoint = 'https://databackend-lirs.onrender.com/student/signup'
 
 
     let navigate = useNavigate()
@@ -48,24 +42,20 @@ const Signup = () => {
             axios.post(endpoint, values)
                 .then((result) => {
                     setLoading("")
-                    // console.log(result.data);
+                    // console.log(result.data.result);
                     toast.success("Sign up Successful!");
-                    localStorage.setItem("result", JSON.stringify(values));
-                    // navigate("/student/signin")
+                    localStorage.setItem("result", JSON.stringify(result.data.result));
+                    navigate("/student/signin")
                 })
                 .catch((err) => {
                     console.log(err);
                     setLoading(false)
                     if (err.response.status === 409) {
-                        // console.log("duplicate user found");
                         toast.error("Duplicate user found");
-                        // setMessage('duplicate user found')
                     }
                 })
-
-
-
         },
+
         validationSchema: Yup.object({
             firstName: Yup.string().required("This field is required"),
 
@@ -73,12 +63,12 @@ const Signup = () => {
 
             email: Yup.string().required("This field is required").email("You must enter an email address"),
 
-            password: Yup.string().matches(lower, "Must include lowercase letter").matches(upper, "Must include uppercase letter").matches(number, "Must include a number").matches(length, "Must not be less than 8 characters")
-                .required("This field is required"),
+            password: Yup.string().matches(lower, "Must include lowercase letter").matches(upper, "Must include uppercase letter").matches(number, "Must include a number").matches(length, "Must not be less than 8 characters").required("This field is required"),
 
             dob: Yup.string().required("This field is required"),
 
-            phone: Yup.string().matches(/^[\d]{10}$/, "This field is required"),
+            phone: Yup.string().matches(/^\d{10}$/, "Phone number must be 10 digits").required("This field is required"),
+
         })
     })
 
@@ -88,7 +78,7 @@ const Signup = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
-                            <img src={graduation} alt="" width={500} height={570} />
+                            <img className='graduation' src={graduation} alt="" />
                         </div>
                         <div className="col-lg-5 shadow">
                             <h1 id='reg' className='fw-bold'>SIGN UP</h1>
@@ -130,12 +120,14 @@ const Signup = () => {
                                     <small className='text-danger'>{formik.touched.phone && formik.errors.phone}</small>
                                 </div>
 
-
-                                <button id='submit' type='submit' className='btn text-light w-100 fs-5 fw-bold rounded my-3 bg-danger hover:bg-light'>
+                                {/* <div className='my-2'>
+                                    <label id='label' htmlFor="phone">PHONE NUMBER</label>
+                                    <input type="text" id="phone" className={formik.touched.phone && formik.errors.phone ? "form-control is-invalid" : "form-control"} placeholder='Enter Your phone number' {...formik.getFieldProps('phone')} />
+                                    <small className='text-danger'>{formik.touched.phone && formik.errors.phone}</small>
+                                </div> */}
+                                <button id='submit' type='submit' className='btn w-100 fs-5 fw-bold rounded my-3'>
                                     {loading ? <img src={gif} alt="" width={25} /> : 'Submit'}</button>
-
                             </form>
-
                         </div>
                     </div>
                     <ToastContainer />
