@@ -1,7 +1,3 @@
-/* #signup{
-    background-color: white;
-    margin-top: 20px;
-} */
 #chat{
   background-image: url(./component/Student/image/wall3.jpg);
   background-repeat: no-repeat;
@@ -31,7 +27,7 @@
   }
   #section{
     background-color: rgb(4,48,64);
-    height: 120vh;
+    /* height: 120vh; */
   }
   #sectionA{
     background-color: rgb(4,48,64);
@@ -64,7 +60,7 @@
     margin-left: 120px;
   }
   #submit{
-    background-color: white;
+    background-color: rgb(179,148,113);;
     color: rgb(4,48,64);
   }
   #submit:hover{
@@ -118,12 +114,24 @@
   color: rgb(4,48,64);
 }
 
+#password{
+  position: absolute; 
+  top: 20%; 
+  right: 30px; 
+  transform: translateY(-10%);
+  /* color: blue; */
+}
+
 
 
 
 
 
 @media(max-width: 900px){
+  #section{
+    background-color: rgb(4,48,64);
+    /* height: 100%; */
+  }
   #up{
     margin-left: 0px;
   }
@@ -142,9 +150,16 @@
     opacity: 0.9;
  }
  .graduation{
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
 }
+#password{
+  position: absolute; 
+  top: 20%; 
+  right: 40px; 
+  transform: translateY(-10%);
+}
+
 #section{
   background-color: rgb(4,48,64);
   height: 145vh;

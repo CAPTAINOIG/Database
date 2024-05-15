@@ -8,10 +8,13 @@ import gif from '../Student/image/gif.gif'
 import graduation from '../Student/image/graduation.png'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import { IoEyeSharp } from "react-icons/io5";
+import { BsEyeSlashFill } from "react-icons/bs";
 
 
 const Signup = () => {
     const [loading, setLoading] = useState(false)
+    const [passwordVisible, setPasswordVisible] = useState(false)
 
 
     let lower = new RegExp(`(?=.*[a-z])`);
@@ -19,11 +22,19 @@ const Signup = () => {
     let number = new RegExp(`(?=.*[0-9])`);
     let length = new RegExp(`(?=.{8,})`);
 
-    // let endpoint = 'http://localhost:2300/student/signup'
-    let endpoint = 'https://databackend-lirs.onrender.com/student/signup'
+    let endpoint = 'http://localhost:2300/student/signup'
+    // let endpoint = 'https://databackend-lirs.onrender.com/student/signup'
+
 
 
     let navigate = useNavigate()
+
+    const togglePasswordVisibility=(field)=> {
+        if(field === 'password') {
+            setPasswordVisible(!passwordVisible)
+        }
+    }
+
     const formik = useFormik({
         initialValues: {
             firstName: "",
@@ -102,9 +113,13 @@ const Signup = () => {
                                     <small className='text-danger'>{formik.touched.email && formik.errors.email}</small>
                                 </div>
 
-                                <div className='my-2'>
+                                <div className='my-2 ' style={{ position: 'relative' }}>
                                     <label id='label' htmlFor="">PASSWORD</label>
-                                    <input type="text" placeholder='Enter Your password' onChange={formik.handleChange} onBlur={formik.handleBlur} className={formik.touched.password && formik.errors.password ? "form-control is-invalid" : "form-control"} value={formik.values.password} name='password' />
+                                    <div style={{ position: 'relative' }}>
+                                    <input  type={!passwordVisible ? 'text' : 'password'} placeholder='Enter Your password' onChange={formik.handleChange} onBlur={formik.handleBlur} className={formik.touched.password && formik.errors.password ? "form-control is-invalid" : "form-control"} value={formik.values.password} name='password' />
+                                    <span id='password' onClick={() => togglePasswordVisibility('password')} className=''>{!passwordVisible ?  <IoEyeSharp /> :<BsEyeSlashFill /> }</span>
+                                </div>
+
                                     <small className='text-danger'>{formik.touched.password && formik.errors.password}</small>
                                 </div>
 
@@ -119,12 +134,6 @@ const Signup = () => {
                                     <input type="number" className={formik.touched.phone && formik.errors.phone ? "form-control is-invalid" : "form-control"} placeholder='Enter Your phone number' name='phone' onChange={formik.handleChange} value={formik.values.phone} onBlur={formik.handleBlur} />
                                     <small className='text-danger'>{formik.touched.phone && formik.errors.phone}</small>
                                 </div>
-
-                                {/* <div className='my-2'>
-                                    <label id='label' htmlFor="phone">PHONE NUMBER</label>
-                                    <input type="text" id="phone" className={formik.touched.phone && formik.errors.phone ? "form-control is-invalid" : "form-control"} placeholder='Enter Your phone number' {...formik.getFieldProps('phone')} />
-                                    <small className='text-danger'>{formik.touched.phone && formik.errors.phone}</small>
-                                </div> */}
                                 <button id='submit' type='submit' className='btn w-100 fs-5 fw-bold rounded my-3'>
                                     {loading ? <img src={gif} alt="" width={25} /> : 'Submit'}</button>
                             </form>
