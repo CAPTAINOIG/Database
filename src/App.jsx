@@ -15,14 +15,15 @@ import Chat from './component/Student/pages/Chat'
 import Pay from './component/Student/pages/Pay'
 import Passwordrecovery from './component/Student/pages/Passwordrecovery'
 import ResetPassword from './component/Student/pages/Resestpassword'
-// <Route path='dashboard/*' element={<Dashboard/>}/>
+import Loader from './component/Student/Loader'
 
 function App() {
-    // let token = localStorage.token
+    
   return (
     <>
     <Routes>
-      <Route path='/' element={<Navbar/>}/>
+    <Route path='/' element={<Loader/>}/>
+      <Route path='/nav' element={<Navbar/>}/>
       <Route path='/student/signup' element={<Signup/>}/>
       <Route path='/student/signin' element={<Signin/>}/>
       <Route path='/staff/signup' element={<Staffsignup/>}/>

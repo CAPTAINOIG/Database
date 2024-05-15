@@ -9,6 +9,10 @@
     background-color: rgb(4,48,64);
 }
 
+#butt:hover{
+    background-color: rgb(179,148,113);
+}
+
 #image{
     margin-top: 25px;
     border-radius: 50px;

@@ -13,6 +13,9 @@
   height: 83vh;
   opacity: 0.8;
 }
+#btn:hover{
+  background-color: rgb(179,148,113);
+}
 #clas{
   margin-top: 150px; 
 }
@@ -23,11 +26,22 @@
 }
 #navbar{
     background-color: rgb(4,48,64);
-    
   }
   #section{
     background-color: rgb(4,48,64);
     /* height: 120vh; */
+  }
+  #loader{
+    background-color: rgb(4,48,64);
+    height: 100vh;
+  }
+  #loaderimg{
+    margin-left: 400px;
+  }
+  #loadercap{
+    margin-left: 350px;
+  color: rgb(179,148,113);
+    font-size: 50px;
   }
   #sectionA{
     background-color: rgb(4,48,64);
@@ -56,17 +70,23 @@
     background-color: rgb(4,48,64);;
   }
   #reg{
-    color: rgb(4,48,64);
-    margin-left: 120px;
+    color: rgb(179,148,113);
+    margin-left: 150px;
+    font-size: 30px;
+    margin-top: 50px;
   }
   #submit{
-    background-color: rgb(179,148,113);;
+    background-color: rgb(179,148,113);
     color: rgb(4,48,64);
   }
   #submit:hover{
     background-color: red;
   }
   .graduation{
+    width: 500px;
+    height: 600px;
+  }
+  .graduation2{
     width: 500px;
     height: 570px;
   }
@@ -80,10 +100,13 @@
     margin-top: 20px;
 }
 #up{
-    margin-left: 160px;
+    margin-left: 200px;
     color: rgb(4,48,64);
-    background-color: rgb(4,48,64);
+    background-color: rgb(179,148,113);
     margin-top: 20px;
+}
+#up:hover{
+  background-color: red;
 }
 #buttonA{
   background-color: rgb(4,48,64);
@@ -109,10 +132,15 @@
   margin-left: 100px;
 }
 #forgpass{
-  margin-left: 120px;
+  margin-left: 250px;
   text-decoration: none;
-  color: rgb(4,48,64);
+  color: rgb(179,148,113);
 }
+
+#forgpass:hover{
+  color: white;
+}
+
 
 #password{
   position: absolute; 
@@ -122,6 +150,15 @@
   /* color: blue; */
 }
 
+#page{
+    background-color: rgb(179,148,113);
+    margin-top: 50px;
+}
+
+#pagy{
+  margin-top: 80px;
+  height: 450px;
+}
 
 
 
@@ -132,9 +169,15 @@
     background-color: rgb(4,48,64);
     /* height: 100%; */
   }
-  #up{
-    margin-left: 0px;
+  #flex{
+    gap: 150px;
   }
+  #up{
+    margin-left: 200px;
+    color: rgb(4,48,64);
+    background-color: rgb(179,148,113);
+    margin-top: 20px;
+}
   #forgpass{
     margin-left: 20px;
     font-size: 15px;
@@ -149,9 +192,40 @@
     height: 87vh;
     opacity: 0.9;
  }
+ #forgpass{
+  margin-left: 200px;
+  text-decoration: none;
+  color: rgb(179,148,113);
+}
+
  .graduation{
   width: 350px;
   height: 350px;
+}
+.graduation2{
+  width: 350px;
+  height: 350px;
+}
+#page{
+  background-color: rgb(179,148,113);
+  margin-top: 10px;
+}
+
+#pagy{
+margin-top: 10px;
+height: 300px;
+}
+#loader{
+  background-color: rgb(4,48,64);
+  height: 110vh;
+}
+#loaderimg{
+  margin-top: 100px;
+  margin-left: -50px;
+}
+#loadercap{
+  margin-left: 5px;
+  font-size: 30px;
 }
 #password{
   position: absolute; 
@@ -198,7 +272,7 @@
 }
 
 #up{
-  margin-left: 20px;
+  margin-left: 0px;
 }
 #reg{
   color: rgb(4,48,64);
@@ -237,7 +311,7 @@
   font-family: 'Times New Roman', Times, serif;
   margin-left: 100px;
   margin-top: -65px;
-  font-size: 10px;
+  font-size: 20px;
   padding-left: 0px;
 }
 .card{
@@ -245,11 +319,11 @@
   width: 100%;
 }
 #profile, #doc, #course, #pass, #fee, #pay, #resources, #reg, #acco, #board, #time, #semester{
-  margin-left: 80px;
+  margin-left: 120px;
   color: rgb(4,48,64);
 }
 .profile, .doc, .course, .pass, .fee, .pay, .resources, .reg, .acco, .board, .time, .semester{
-  margin-left: 100px;   
+  margin-left: 150px;   
 }
 #sectioned{
   background-color: rgb(4,48,64);

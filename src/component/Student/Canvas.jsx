@@ -39,7 +39,7 @@ const Canvas = () => {
   }
   return (
     <>
-      <section id='background'>
+      <section id='background' className='border'>
         <button id='color' className="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
           <img src={tog} alt="" width={50} />
         </button>
@@ -116,10 +116,9 @@ const Canvas = () => {
         </div>
 
         <div className='d-flex' id='premium'>
-
-          <img src={portal} alt="" width={50} />
+          <img id='cap' src={cap} alt="" width={100} />
           <span>CAPTAIN COLLEGE</span>
-          <img src={cap} alt="" width={65} />
+          <img id='cap' src={cap} alt="" width={100} />
         </div>
        
 

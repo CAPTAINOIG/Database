@@ -22,8 +22,8 @@ const Signup = () => {
     let number = new RegExp(`(?=.*[0-9])`);
     let length = new RegExp(`(?=.{8,})`);
 
-    let endpoint = 'http://localhost:2300/student/signup'
-    // let endpoint = 'https://databackend-lirs.onrender.com/student/signup'
+    // let endpoint = 'http://localhost:2300/student/signup'
+    let endpoint = 'https://databackend-lirs.onrender.com/student/signup'
 
 
 

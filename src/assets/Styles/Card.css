@@ -9,6 +9,10 @@
     color: rgb(4,48,64);
     text-decoration: none;
 }
+#ref:hover{
+    font-weight: bold;
+    color: rgb(179,148,113);
+}
 #card2{
     margin-top: 100px;
 }

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Middle from './Middle'
 import Alumni from './Alumni'
 import Card from './Card'
+import Footer from './Footer'
 
 
 const Navbar = () => {
@@ -28,8 +29,8 @@ const Navbar = () => {
     </li>  
       </ul>
       <div className="d-flex">
-          <Link className='btn btn-danger' to="/student/signup">SignUp</Link>
-          <Link className='btn btn-danger ms-3' to="/student/signin">Signin</Link>
+          <Link id='btn' className='btn btn-danger' to="/student/signup">SignUp</Link>
+          <Link id='btn' className='btn btn-danger ms-3' to="/student/signin">Signin</Link>
       </div>
     </div>
   </div>
@@ -38,6 +39,7 @@ const Navbar = () => {
   <Middle/>
   <Alumni/>
   <Card/>
+  <Footer/>
     </>
   )
 }
