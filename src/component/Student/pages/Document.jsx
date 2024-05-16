@@ -108,7 +108,6 @@ const Document = () => {
                         </div>
                     </div>
                 </div>
-                <img className='img' src={myImage} alt="" />
             </section>
 
 
@@ -130,6 +129,7 @@ const Document = () => {
                             <td>{item.description}</td>
                             <td>{item.date}</td>
                             <td>{item.time}</td>
+                            <img className='img' src={myImage} alt="" />
                         </tr>
                     ))
                 }
