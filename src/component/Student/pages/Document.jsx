@@ -55,9 +55,9 @@ const Document = () => {
         console.log(data);    
         axios.post(endpoint, { fileUpload })
         .then((response) => {
-            console.log(response.data.myimage);
-            setMyImage(response.data.myimage)
-            localStorage.setItem("imageStore", JSON.stringify(response.data.myimage))
+            console.log(response.data.uploadResult.secure_url);
+            setMyImage(response.data.uploadResult.secure_url)
+            localStorage.setItem("imageStore", JSON.stringify(response.data.uploadResult.secure_url))
             setStudentDetails([...studentDetails, data]);
     
             setDescription("")
