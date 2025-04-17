@@ -69,9 +69,6 @@ const Dashboard = () => {
       <Header userInfo={userInfo} />
       <Canvas />
       <Card />
-
-
-
     </>
   )
 }
